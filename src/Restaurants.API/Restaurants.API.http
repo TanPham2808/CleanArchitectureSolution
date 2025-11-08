@@ -1,0 +1,63 @@
+﻿@Restaurants.API_HostAddress = https://localhost:7083
+@token = CfDJ8OFiYgJoSCBGhJF7MUW0gaQ4Vg7LfzKyQ-qcdF_6UW_LDHpq9lFr-Meqz9nyoZQAIra0UpAjCaNgX9T8dQm3_d_gBux0BrjzELjUmLqdbOFW9rvx1djQALoFDLg1gTPODJ_19_nlC27C90LdLy_zW7BWVGS2WJA5Qojq43L_lrd581tQw4ohxmGr-gE5kffdXYkGtyszeLzYL2fnT3e-IgfesPrwGNAAhv4RhkaWXlsBiJeXVESVva0CEPehlOjV0Q0xxc5MZv1l9VEXI1856OLKvVrcl-pMO7FoxVFYckDeLK_0qZ95OCXQwJmv35wDL6LZW8BkHTu00_FA2X6aSZWr6aRYprL9d-0iZ8m-D2H2QssH4ZIsC2-qmo3f7Ty2diIi2Onb3dzir4pUcE2ILuxnIYIJeXzKRJdgBRYPuzHzB7DobDUrqeT9-vLEbly01oTy691YfmOmam3LwZel_vylAkP5TllHzCABxr4ZZ8jxrh7JCzzWqHKFejeXpjTMrGKkM0qtyszFmNtZQe7a-r12C1eAw_k7ylebN44B3vf44_B_ONvuoZ7_eoquKhuYQCbSes-phzdHysSYtLC1lT7-U5q8EMQlA2x9lJIdcPpw8aPpj_htwGtF78l3-ahYM_YxKY8Yf8tBdKChxbutppOgtioPd7fi8pGQuDsubAg6dYLWIKxPDcARGBCVfPTPd4GKgut9EVh_EvUNAXIJ6fwUImaunI8-4OanAS2o9bmP
+
+# GET {{Restaurants.API_HostAddress}}/api/restaurants
+# Authorization: Bearer {{token}}
+
+
+GET {{Restaurants.API_HostAddress}}/api/restaurants?searchPhrase=&pageSize=5&pageNumber=1&sortBy=Name&sortDirection=Descending
+Authorization: Bearer {{token}}
+
+###
+GET {{Restaurants.API_HostAddress}}/api/restaurants/1
+
+###
+POST {{Restaurants.API_HostAddress}}/api/restaurants
+Content-Type: application/json
+{
+  "Name": "Pasodole ",
+  "Description": "Tiec cuoi Pasodole",
+  "Category": "Fine Dining",
+  "HasDelivery": true,
+  "ContactEmail": "contact@Pasodole.vn",
+  "ContactNumber": "0901 234 567",
+  "City": "HCM",
+  "Street": "4432 Le Lai",
+  "PostalCode": "54321"
+}
+
+###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/5
+
+###
+POST {{Restaurants.API_HostAddress}}/api/restaurants/3/dishes
+Content-Type: application/json
+
+{
+  "Name": "Ca Hap",
+  "Description": "Classic Italian pasta dish with rich meat sauce",
+  "Price": 12.99,
+  "KiloCalories": 750
+}
+
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/identity/register
+Content-Type: application/json
+
+{
+    "email": "user@test.com",
+    "password": "Password1!"
+}
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/identity/login
+Content-Type: application/json
+
+{
+    "email": "xuantan.pham2808@gmail.com",
+    "password": "Xuantan2808@@"
+}
