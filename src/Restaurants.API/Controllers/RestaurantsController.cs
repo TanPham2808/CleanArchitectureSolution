@@ -20,7 +20,7 @@ namespace Restaurants.API.Controllers
     //[Authorize]
     public class RestaurantsController : ControllerBase
     {
-        public readonly IRestaurantsService _restaurantsService;
+        //public readonly IRestaurantsService _restaurantsService;
         public readonly IMediator _mediator;
 
         //public RestaurantsController(IRestaurantsService restaurantsService)
