@@ -53,3 +53,5 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 **/appsettings.Development.json
+/.vs/CleanArchitectureSolution/CopilotIndices/17.14.1347.20289
+/.vs/CleanArchitectureSolution/FileContentIndex
